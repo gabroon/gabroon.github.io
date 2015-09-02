@@ -2109,6 +2109,7 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			display:block;
 		}
 
 			ul.icons li {
@@ -2457,6 +2458,8 @@
 		top: 0;
 		width: 23em;
 		right: 0;
+		overflow:scroll;
+		
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2485,7 +2488,7 @@
 
 			#header > header .avatar {
 				display: block;
-				margin: 0 auto 2.25em auto;
+				margin: 0 auto 1em auto;
 				width: 8em;
 			}
 
@@ -2504,7 +2507,7 @@
 			bottom: 0;
 			left: 0;
 			padding: 2em;
-			position: absolute;
+			position: relative;
 			width: 100%;
 		}
 
