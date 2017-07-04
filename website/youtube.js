@@ -35,13 +35,16 @@ function getLatest20Videos(){
 }
 
 function listLast20Videos(myArr){
+    $("#showLatest20").hide();
     var out = "";
     var i;
     for(i = 0; i < myArr.length; i++) {
         
         var title = myArr[i].snippet.title;
         var videoId = myArr[i].id.videoId;
-        out = out + "<li id='"+videoId+"'>"+title+"</li>";
+        var thumbnail = myArr[i].snippet.thumbnails.default.url;
+        out = out + "<li style='padding:10px;display:block;float:left;' onclick='playVid(this.id)' id='"+videoId+"'><div style='display:block;' ><img style='float:left;cursor:pointer;margin-right:10px;border-radius:15px;width:120px;height:90px;' src='"+thumbnail+"' /> <p style='cursor:pointer;display:inline;width:50%;font-weight:bold;'>"+ title+"</p></div></li>";
+
     }
     $("#latest").append(out);
 }
@@ -51,9 +54,9 @@ function showLatestVid(myArr){
 	var out = "";
     var i;
     for(i = 0; i < myArr.length; i++) {
-    	console.log();
+    	
     	var videoId = myArr[i].id.videoId;
-    	$("#myDiv").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'" frameborder="0" allowfullscreen></iframe>');
+    	$("#myDiv").append('<iframe id="currentVid"  width="560" height="315" src="https://www.youtube.com/embed/'+videoId+'" frameborder="0" allowfullscreen></iframe>');
       
     }
 }
@@ -62,4 +65,8 @@ function getChannelFromUrl(){
     var params = (new URL(document.location)).searchParams;
     var channelId = params.get("ch");
     return channelId;
+}
+
+function playVid(id){
+    $("#currentVid").replaceWith('<iframe id="currentVid" width="560" height="315" src="https://www.youtube.com/embed/'+id+'" frameborder="0" allowfullscreen></iframe>');
 }
