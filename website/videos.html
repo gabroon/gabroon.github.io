@@ -34,12 +34,7 @@
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous"></script>
 		<script type="text/javascript" src="youtube.js"></script>
-		<script type="text/javascript" src="jquery.nicescroll.min.js"></script>
-		<script type="text/javascript">
-		$(function() {  
-  		  $("#scrollbar1").niceScroll({cursorcolor:"#00F"});
-			});
-		</script>
+	
       
     </head>
     <body>
@@ -93,23 +88,19 @@
             <div class="container">
                 <!-- Example row of columns -->
                 <div class="row">
-					<div class="col-md-8 col-sm-12 col-xs-12">
+					<div class="col-md-7 col-sm-12 col-xs-12">
 						<div id="myDiv" >
 							
 						</div>
 					</div>
-				<div class="col-md-4 col-sm-12 col-xs-12">
+				<div style="text-align: center;" class="col-md-5 col-sm-12 col-xs-12">
+                   
 						<div id="list" >
-								<div id="scrollbar1">
-						           
-						                   <button onclick="getLatest20Videos()">Click</button>
-																<ul id="latest">
-																</ul>
+								<ul id="latest">
 
-					       
-						</div>
-					</div>
-						
+								</ul>
+                            </div>
+						 <a id="showLatest20" style="font-weight:bold;vertical-align: middle;display: inline-block;line-height:normal;line-height:5em;" onclick="getLatest20Videos()">Show more of the latest videos</a>
 						</div>
 					</div>
 
