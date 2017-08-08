@@ -1,70 +1,70 @@
 	$body = $("body");
 $('#convert_madamera').click(function(){
 	$body.addClass("loading"); 
-	var madmeraOutPut = '<?xml version="1.0" encoding="UTF-8"?><!-- ~ Copyright (c) 2013. The Trustees of Columbia University in the City of New York.~ The copyright owner has no objection to the reproduction of this work by anyone for~ non-commercial use, but otherwise reserves all rights whatsoever.  For avoidance of~ doubt, this work may not be reproduced, or modified, in whole or in part, for commercial~ use without the prior written consent of the copyright owner.-->'+
-    '<madamira_input xmlns="urn:edu.columbia.ccls.madamira.configuration:0.1">'+
-    '<madamira_configuration>'+
-        '<preprocessing sentence_ids="false" separate_punct="true" input_encoding="UTF8"/>'+
-        '<overall_vars output_encoding="UTF8" dialect="MSA" output_analyses="TOP" morph_backoff="NONE"/>'+
-        '<requested_output>'+
-            '<req_variable name="PREPROCESSED" value="true" />'+
-            '<req_variable name="STEM" value="true" />'+
-            '<req_variable name="GLOSS" value="true" />'+
-            '<req_variable name="LEMMA" value="true" />'+
-            '<req_variable name="DIAC" value="true" />'+
-            '<req_variable name="ASP" value="true" />'+
-            '<req_variable name="CAS" value="true" />'+
-            '<req_variable name="ENC0" value="true" />'+
-            '<req_variable name="ENC1" value="false" />'+
-            '<req_variable name="ENC2" value="false" />'+
-            '<req_variable name="GEN" value="true" />'+
-            '<req_variable name="MOD" value="true" />'+
-            '<req_variable name="NUM" value="true" />'+
-            '<req_variable name="PER" value="true" />'+
-            '<req_variable name="POS" value="true" />'+
-            '<req_variable name="PRC0" value="true" />'+
-            '<req_variable name="PRC1" value="true" />'+
-            '<req_variable name="PRC2" value="true" />'+
-            '<req_variable name="PRC3" value="true" />'+
-            '<req_variable name="STT" value="true" />'+
-            '<req_variable name="VOX" value="true" />'+
-            '<req_variable name="BW" value="false" />'+
-            '<req_variable name="SOURCE" value="false" />'+
-			'<req_variable name="NER" value="true" />'+
-			'<req_variable name="BPC" value="true" />'+
-        '</requested_output>'+
-        '<tokenization>'+
-            '<scheme alias="ATB" />'+
-			'<scheme alias="D3_BWPOS" /> <!-- Required for NER -->'+
-            '<scheme alias="ATB4MT" />'+
-            '<scheme alias="MyD3">'+
-				'<!-- Same as D3 -->'+
-				'<scheme_override alias="MyD3"'+
-								 'form_delimiter="\u00B7"'+
-								 'include_non_arabic="true"'+
-								 'mark_no_analysis="false"'+
-								 'token_delimiter=" "'+
-								 'tokenize_from_BW="false">'+
-					'<split_term_spec term="PRC3"/>'+
-					'<split_term_spec term="PRC2"/>'+
-					'<split_term_spec term="PART"/>'+
-					'<split_term_spec term="PRC0"/>'+
-					'<split_term_spec term="REST"/>'+
-					'<split_term_spec term="ENC0"/>'+
-					'<token_form_spec enclitic_mark="+"'+
-									 'proclitic_mark="+"'+
-									 'token_form_base="WORD"'+
-									 'transliteration="UTF8">'+
-						'<normalization type="ALEF"/>'+
-						'<normalization type="YAA"/>'+
-						'<normalization type="DIAC"/>'+
-						'<normalization type="LEFTPAREN"/>'+
-						'<normalization type="RIGHTPAREN"/>'+
-					'</token_form_spec>'+
-				'</scheme_override>'+
-			'</scheme>'+
-        '</tokenization>'+
-    '</madamira_configuration>'+
+	var madmeraOutPut = '<?xml version="1.0" encoding="UTF-8"?><!-- ~ Copyright (c) 2013. The Trustees of Columbia University in the City of New York.~ The copyright owner has no objection to the reproduction of this work by anyone for~ non-commercial use, but otherwise reserves all rights whatsoever.  For avoidance of~ doubt, this work may not be reproduced, or modified, in whole or in part, for commercial~ use without the prior written consent of the copyright owner.--> \n'+
+    '<madamira_input xmlns="urn:edu.columbia.ccls.madamira.configuration:0.1">\n'+
+    '<madamira_configuration>\n'+
+        '<preprocessing sentence_ids="false" separate_punct="true" input_encoding="UTF8"/>\n'+
+        '<overall_vars output_encoding="UTF8" dialect="MSA" output_analyses="TOP" morph_backoff="NONE"/>\n'+
+        '<requested_output>\n'+
+            '<req_variable name="PREPROCESSED" value="true" />\n'+
+            '<req_variable name="STEM" value="true" />\n'+
+            '<req_variable name="GLOSS" value="true" />\n'+
+            '<req_variable name="LEMMA" value="true" />\n'+
+            '<req_variable name="DIAC" value="true" />\n'+
+            '<req_variable name="ASP" value="true" />\n'+
+            '<req_variable name="CAS" value="true" />\n'+
+            '<req_variable name="ENC0" value="true" />\n'+
+            '<req_variable name="ENC1" value="false" />\n'+
+            '<req_variable name="ENC2" value="false" />\n'+
+            '<req_variable name="GEN" value="true" />\n'+
+            '<req_variable name="MOD" value="true" />\n'+
+            '<req_variable name="NUM" value="true" />\n'+
+            '<req_variable name="PER" value="true" />\n'+
+            '<req_variable name="POS" value="true" />\n'+
+            '<req_variable name="PRC0" value="true" />\n'+
+            '<req_variable name="PRC1" value="true" />\n'+
+            '<req_variable name="PRC2" value="true" />\n'+
+            '<req_variable name="PRC3" value="true" />\n'+
+            '<req_variable name="STT" value="true" />\n'+
+            '<req_variable name="VOX" value="true" />\n'+
+            '<req_variable name="BW" value="false" />\n'+
+            '<req_variable name="SOURCE" value="false" />\n'+
+			'<req_variable name="NER" value="true" />\n'+
+			'<req_variable name="BPC" value="true" />\n'+
+        '</requested_output>\n'+
+        '<tokenization>\n'+
+            '<scheme alias="ATB" />\n'+
+			'<scheme alias="D3_BWPOS" /> <!-- Required for NER -->\n'+
+            '<scheme alias="ATB4MT" />\n'+
+            '<scheme alias="MyD3">\n'+
+				'<!-- Same as D3 -->\n'+
+				'<scheme_override alias="MyD3"\n'+
+								 'form_delimiter="\u00B7"\n'+
+								 'include_non_arabic="true"\n'+
+								 'mark_no_analysis="false"\n'+
+								 'token_delimiter=" "\n'+
+								 'tokenize_from_BW="false">\n'+
+					'<split_term_spec term="PRC3"/>\n'+
+					'<split_term_spec term="PRC2"/>\n'+
+					'<split_term_spec term="PART"/>\n'+
+					'<split_term_spec term="PRC0"/>\n'+
+					'<split_term_spec term="REST"/>\n'+
+					'<split_term_spec term="ENC0"/>\n'+
+					'<token_form_spec enclitic_mark="+"\n'+
+									 'proclitic_mark="+"\n'+
+									 'token_form_base="WORD"\n'+
+									 'transliteration="UTF8">\n'+
+						'<normalization type="ALEF"/>\n'+
+						'<normalization type="YAA"/>\n'+
+						'<normalization type="DIAC"/>\n'+
+						'<normalization type="LEFTPAREN"/>\n'+
+						'<normalization type="RIGHTPAREN"/>\n'+
+					'</token_form_spec>\n'+
+				'</scheme_override>\n'+
+			'</scheme>\n'+
+        '</tokenization>\n'+
+    '</madamira_configuration>\n'+
 	'<in_doc id="ExampleDocumen"> \n';
 	var rawText = $('#rawText').val();
 	//checl if var is empty
