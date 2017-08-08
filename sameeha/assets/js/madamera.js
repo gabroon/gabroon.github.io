@@ -74,6 +74,7 @@ $('#convert_madamera').click(function(){
 	
 		var arrayOfSentences = rawText.split(';');
 	//if array not empty 
+		if(arrayOfSentences.length == 0 || arrayOfSentences === null)
 	for (var i = 0 ; i <= arrayOfSentences.length - 1; i++) {
 		madmeraOutPut = madmeraOutPut + "<in_seg id=\"SENT"+i+"\">" +arrayOfSentences[i] +"</in_seg> \n"
 		
