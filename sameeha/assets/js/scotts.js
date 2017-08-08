@@ -24,7 +24,11 @@ $body.addClass("loading");
 	var WHADVP	= 0;
 	var WHNP	= 0;
 	var WHPP	= 0;
-	for (var i = outSeg.length - 1; i >= 0; i--) {
+	if(outSeg.length == 0){
+		
+		alert("The xml format you entered is not correct or the xml has no values")
+	}else{
+	   for (var i = outSeg.length - 1; i >= 0; i--) {
 		var segmentInfo = $(outSeg[i]).find('segment_info');		
 		var bpc =  $(segmentInfo).children();
 		var chunkArray =$(bpc[1]).children();
@@ -96,6 +100,8 @@ $body.addClass("loading");
 		};
 		
 	};
+	   }
+	
 
 	
 	
