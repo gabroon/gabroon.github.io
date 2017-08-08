@@ -1,0 +1,305 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+        <link rel="stylesheet" href="assets/css/opensans-web-font.css" />
+        <link rel="stylesheet" href="assets/css/montserrat-web-font.css" />
+
+		<!--For font-awesome css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	    <style>
+	    	/* Start by setting display:none to make this hidden.
+		   Then we position it in relation to the viewport window
+		   with position:fixed. Width, height, top and left speak
+		   for themselves. Background we set to 80% white with
+		   our animation centered, and no-repeating */
+		.modal {
+		    display:    none;
+		    position:   fixed;
+		    z-index:    1000;
+		    top:        0;
+		    left:       0;
+		    height:     100%;
+		    width:      100%;
+		    background: rgba( 255, 255, 255, .8 ) 
+				url('assets/Image/ajax-loader.gif') 
+				50% 50% 
+				no-repeat;
+		}
+
+		/* When the body has the loading class, we turn
+		   the scrollbar off with overflow:hidden */
+		body.loading {
+		    overflow: hidden;   
+		}
+
+		/* Anytime the body has the loading class, our
+		   modal element will be visible */
+		body.loading .modal {
+		    display: block;
+		}
+	    </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
+        <nav class="mainmenu navbar navbar-default navbar-fixed-top">
+            <div class="container">
+			
+			<div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					
+					<div class="brand-bg">
+                    <a class="navbar-brand" style="font-weight: bold;padding-top: 10px" href="index.html">Madamera Conversion tool</a>
+					</div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav pull-right">
+                        
+                        <li><a id="GoToMadamera" href="#">Madamera</a></li>
+                        <li><a id="GoToScotts" href="#">Scotts </a></li>
+                        
+                        
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+                
+				</div>
+				
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!--Home page style-->
+       
+
+
+		
+
+        <!-- Sections -->
+      
+		
+		
+
+        <section id="madameraTool" class="sections">
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+					
+					
+					<div class="col-sm-6 col-sm-12 col-xs-12">
+						<div class="portfolio">
+						<button id="convert_madamera" class="btn">Convert to madamera format</button>
+						<textarea style="text-align: right"  id="rawText" placeholder="مثال: جملة; جملة أخرى" cols="60" rows="30"></textarea>
+						
+						</div>
+					</div>
+					<div class="col-sm-6 col-sm-12 col-xs-12">
+						<div class="result-madamera" >
+							<button id="copyButton" class="btn">Copy xml</button>
+							<textarea  cols="60" rows="30" readonly id="result-madamera"></textarea>
+							
+						</div>
+					</div>
+
+                </div>
+                
+            </div> <!-- /container -->       
+        </section>
+		
+		  <section  id="scotts" class="sections">
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+					
+					<div style="text-align: center" class="col-md-12 col-sm-12 col-xs-12">
+						<button id="convert_scotts" class="btn" >Convert from madamera to scotts</button><br>
+						<textarea id="madamaraText" cols="80" rows="20"></textarea>
+						
+					</div>
+				</div>
+				<div style="text-align: center;margin-top: 10px;" class="row">
+					<div  class="col-sm-5 col-sm-12 col-xs-12">
+							<button id="copyButtonWordAndCat" class="btn">Copy word and category text</button>
+							<textarea cols="40" rows="30" readonly id="resultScottsWordAndCat"></textarea>
+					</div>
+
+					<div  class="col-sm-5 col-sm-12 col-xs-12">
+							<button id="copyButtonCat" class="btn">Copy Category text</button>
+							<textarea cols="40" rows="30" readonly id="resultScottsCat"></textarea>
+					</div>
+					 <div class="col-sm-2 col-sm-12 col-xs-12"> 
+					 		<table style="border: solid 2px black;margin-top:38px ">
+								<thead>
+									<tr>
+										<th style="border: solid 2px black">BPC tag </th>
+										<th>Count</th>
+									</tr>
+								</thead>
+								<tbody> 
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">ADJP </td>
+										<td id="ADJP">0 </td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">ADVP  </td>
+										<td id="ADVP ">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">CONJP</td>
+										<td id="CONJP">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">EDITED  </td>
+										<td id="EDITED">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">FRAG </td>
+										<td id="FRAG">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">INTJ </td>
+										<td id="INTJ">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">LST  </td>
+										<td id="LST">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">NAC </td>
+										<td id="NAC">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">NP </td>
+										<td id="NP">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td  style="border: solid 2px black">PP  </td>
+										<td id="PP">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">PRN  </td>
+										<td id="PRN">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">S  </td>
+										<td id="S">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">SBAR   </td>
+										<td id="SBAR">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">SBARQ   </td>
+										<td id="SBARQ">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">VP  </td>
+										<td id="VP">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">WHADVP   </td>
+										<td id="WHADVP">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">WHNP   </td>
+										<td id="WHNP">0</td>
+									</tr>
+									<tr style="border: solid 2px black"> 
+										<td style="border: solid 2px black">WHPP   </td>
+										<td id="WHPP">0</td>
+									</tr>
+								</tbody>
+							</table>	
+
+					 </div>
+
+							
+					</div>
+				</div>
+				
+              </div> <!-- /container -->   
+        </section>
+		
+		
+		
+		
+		<div class="scroll-top">
+		
+			<div class="scrollup">
+				<i class="fa fa-angle-double-up"></i>
+			</div>
+			
+		</div>
+	
+        <!--Footer-->
+        <footer>
+            <div class="container">
+			<hr>
+            	<div class="row">
+				
+            		<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="social-network">
+							<!-- <a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a> -->
+						</div>
+					</div>
+					
+            		<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="copyright">
+							<p> Madamera Conversion tool  <i class="fa fa-heart"></i> 2017. All rights reserved.</p>
+						</div>
+					</div>
+					
+            	</div>
+            </div>
+		<div class="modal"><!-- Place at bottom of page --></div>
+        </footer>
+
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/madamera.js"></script>
+        <script src="assets/js/scotts.js"></script>
+    </body>
+</html>
