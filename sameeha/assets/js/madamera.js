@@ -65,7 +65,7 @@ $('#convert_madamera').click(function(){
 			'</scheme>'+
         '</tokenization>'+
     '</madamira_configuration>'+
-	'<in_doc id="ExampleDocumen">';
+	'<in_doc id="ExampleDocumen"> \n';
 	var rawText = $('#rawText').val();
 	//checl if var is empty
 	if(rawText == ""){
