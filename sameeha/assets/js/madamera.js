@@ -74,17 +74,21 @@ $('#convert_madamera').click(function(){
 	
 		var arrayOfSentences = rawText.split(';');
 	//if array not empty 
-		if(arrayOfSentences.length == 0 || arrayOfSentences === null)
-	for (var i = 0 ; i <= arrayOfSentences.length - 1; i++) {
-		madmeraOutPut = madmeraOutPut + "<in_seg id=\"SENT"+i+"\">" +arrayOfSentences[i] +"</in_seg> \n"
+		if(arrayOfSentences.length == 0 || arrayOfSentences === null){
+			alert("The text you entered is not a correct format, please type each sentence and end it with ';' ")
+		}else{
+			for (var i = 0 ; i <= arrayOfSentences.length - 1; i++) {
+			madmeraOutPut = madmeraOutPut + "<in_seg id=\"SENT"+i+"\">" +arrayOfSentences[i] +"</in_seg> \n"
 		
-	};
+			};
 
-  madmeraOutPut = madmeraOutPut + "</in_doc></madamira_input>";
- $('#result-madamera').empty();
+			  madmeraOutPut = madmeraOutPut + "</in_doc></madamira_input>";
+			 $('#result-madamera').empty();
 
-	$('#result-madamera').val(madmeraOutPut);
+			$('#result-madamera').val(madmeraOutPut);
+		}
 	}
+	
 	$body.removeClass("loading");
 
 })
