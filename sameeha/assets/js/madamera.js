@@ -82,7 +82,7 @@ $('#convert_madamera').click(function(){
 		
 			};
 
-			  madmeraOutPut = madmeraOutPut + "</in_doc></madamira_input>";
+			  madmeraOutPut = madmeraOutPut + "</in_doc>\n</madamira_input>";
 			 $('#result-madamera').empty();
 
 			$('#result-madamera').val(madmeraOutPut);
