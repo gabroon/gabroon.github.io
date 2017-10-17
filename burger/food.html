@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+
+<head>
+    <!-- Load Google font on the first <head> to prevent error in IE -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,800,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+   <title>Burger Xl</title>
+    <meta name="author" content="Burger Bar" />
+    <meta name="description" content="Burger Bar Description" />
+    <meta name="keywords"  content="Burger Bar Keyword" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    
+
+    <!-- Using IE Conditional to load stylesheet, Load style.less for all browser except lower than IE 9. Lower than IE9 using style.css -->
+    <!--[if !IE]><!-->
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <![endif]-->
+   <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style>
+    
+    </style>
+
+    <!-- Option for Less JS -->
+    <script>
+      less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false
+      };
+    </script>
+    <script type="text/javascript" src="js/less.min.js"></script>
+    <script type="text/javascript" src="js/retina.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.71422.js"></script>
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav class="menu menu-left">
+        <div class="close-menu-btn icon-menu active">&nbsp;</div>    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="active"><a href="food.html">Our Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu-btn"><span class="icon-menu">&nbsp;</span>Menu</div>
+
+    
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <!-- Your Content -->
+    <div id="container">
+
+       
+      <!-- Logo, Company Name, and Slogan Area -->
+        <div class="container">
+            <div class="main-container row">
+                <div id="logo">
+                    <a href="index.html">
+                        <div class="logo-icon"><img width='200'src="img/logo.jpg" /></div>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="full-width-header" class="full-width">
+            <div class="triangle top"></div>
+            <div class="inner">
+                <div class="slide">
+                    <div class="inner-slide">
+                        <img src="img/single/food.jpg" width="1980" height="560">
+                    </div>
+                </div>
+            </div>
+            <div class="triangle bottom"></div>
+        </div>
+        
+        <div class="clear"></div>
+
+        <div class="container full-page">
+            <div id="our-food" class="main-container">
+                <div class="row">
+                    <div class="main-content col">
+                        <div class="title">
+                            <h1>Our Food</h1>
+                        </div>
+                        <div class="intro">
+                            <h2>Burger XL ...Size Matters!</h2>
+                        </div>
+                        <div class="content">
+                            <p>We are happy to adjust our recipes to meet your needs so please let us know how you like yours when you order. If you have any allergies then please let us know.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div id="filter-foods">
+                    <div class="filter button .grey-button" data-filter="all">Show All</div>
+                    <div class="filter button .grey-button" data-filter=".burgers">Burgers</div>
+                    <div class="filter button .grey-button" data-filter=".sandwiches">Wings</div>
+                    <div class="filter button .grey-button" data-filter=".sets">Milkshakes</div>
+                    <div class="filter button .grey-button" data-filter=".sides">Sides</div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div id="foods">
+                       
+                        <div class="food mix col burgers">
+                            <div class="food-picture">
+                                <img src="img/food/2.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Shy Guy</h3>
+                                <h4 class="sub-title">£3.50</h4>
+                            </div>
+                        </div>
+                        <div class="food mix col burgers">
+                            <div class="food-picture">
+                                <img src="img/food/3.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Daisy</h3>
+                                <h4 class="sub-title">£4.00</h4>
+                            </div>
+                        </div>
+                      
+                    
+                        <div class="food mix col burgers">
+                            <div class="food-picture">
+                                <img src="img/food/6.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Philly Cheese</h3>
+                                <h4 class="sub-title">£4.50</h4>
+                            </div>
+                        </div>
+
+                         <div class="food mix col burgers">
+                            <div class="food-picture">
+                                <img src="img/food/6.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Chick-Cow!</h3>
+                                <h4 class="sub-title">£6.00</h4>
+                            </div>
+                        </div>
+
+                         <div class="food mix col burgers">
+                            <div class="food-picture">
+                                <img src="img/food/6.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Daisy Deluxe</h3>
+                                <h4 class="sub-title">£6.50</h4>
+                            </div>
+                        </div>
+
+                         <div class="food mix col burgers">
+                            <div class="food-picture">
+                                <img src="img/food/6.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>King of the north</h3>
+                                <h4 class="sub-title">£6.50</h4>
+                            </div>
+                        </div>
+
+                         <div class="food mix col burgers">
+                            <div class="food-picture">
+                                <img src="img/food/6.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>The Burger XL</h3>
+                                <h4 class="sub-title">£7.50</h4>
+                            </div>
+                        </div>
+                         <div class="food mix col sandwiches">
+                            <div class="food-picture">
+                                <img src="img/food/1.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>6 Wings</h3>
+                                <h4 class="sub-title">£3.50</h4>
+                            </div>
+                        </div>
+                            <div class="food mix col sandwiches">
+                            <div class="food-picture">
+                                <img src="img/food/5.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>12 Wings</h3>
+                                <h4 class="sub-title">£ 6.00</h4>
+                            </div>
+                        </div>
+                        <div class="food mix col sandwiches">
+                            <div class="food-picture">
+                                <img src="img/food/7.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>20 Wings</h3>
+                                <h4 class="sub-title">£10.00</h4>
+                            </div>
+                        </div>
+                        <div class="food mix col sandwiches">
+                            <div class="food-picture">
+                                <img src="img/food/8.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>50 Wings </h3>
+                                <h4 class="sub-title">£20.00</h4>
+                            </div>
+                        </div>
+                          <div class="food mix col sets">
+                            <div class="food-picture">
+                                <img src="img/food/4.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Standard shakes (Vanilla, Strawberry , Chocolate)</h3>
+                                <h4 class="sub-title">£2.50</h4>
+                            </div>
+                        </div>
+                          <div class="food mix col sets">
+                            <div class="food-picture">
+                                <img src="img/food/4.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Xl Shakes (1 or 2 Chocolates)</h3>
+                                <h4 class="sub-title">£3.50</h4>
+                            </div>
+                        </div>
+                          <div class="food mix col sides">
+                            <div class="food-picture">
+                                <img src="img/food/4.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Fires, Sweet Potato Fries, Onion Rings (Regular)</h3>
+                                <h4 class="sub-title">£1.50</h4>
+                            </div>
+                        </div>
+
+                        <div class="food mix col sides">
+                            <div class="food-picture">
+                                <img src="img/food/4.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>Fires, Sweet Potato Fries, Onion Rings (Large)</h3>
+                                <h4 class="sub-title">£2.50</h4>
+                            </div>
+                        </div>
+
+                          <div class="food mix col sides">
+                            <div class="food-picture">
+                                <img src="img/food/4.jpg" />
+                            </div>
+                            <div class="food-name">
+                                <h3>All soft drinks </h3>
+                                <h4 class="sub-title">£1.00</h4>
+                            </div>
+                        </div>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="clear"></div>
+
+         <div class="triangle top footer"></div>
+        <div class="container footer" style="background:yellow !important" >
+            <div id="footer" class="main-container">
+                <div class="footer-top row">
+                    <div class="footer-info col">
+                        <div class="footer-logo">
+                            <div class="logo-icon"><img src="img/logo.jpg" /></div>
+                        </div>
+                        <div class="footer-address">
+                            Burger XL</br>4 Waterloo Street, Newcastle upon Tyne , NE1 4DP
+                        </div>
+                        <div class="footer-contact">
+                           0191 2327723<br/><a href="#">info@burgerxl.co.uk</a>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
+                <div class="footer-bottom row">
+                    <div class="footer-copyright col">
+                        <div class="footer-copyright-text">Copyright 2017  Burger Xl.  All rights reserved.</div>
+                    </div>
+                    <div class="footer-social-media col">
+                       <div class="social-media-icon">
+                             <!--  <span width="50" height="50" class="icon-social-media icon-facebook">&nbsp;</span>
+                            <span class="icon-social-media icon-twitter">&nbsp;</span>
+                            <span class="icon-social-media icon-google">&nbsp;</span>
+                            <span class="icon-social-media icon-pinterest">&nbsp;</span> -->
+                           <a href="https://www.facebook.com/BurgerXLnewcastle/"> <img  src="img/icon/facebook.ico" style = "padding-right:10px" /> </a>
+                            <img src="img/icon/instagram.ico" style = "padding-right:10px"  />
+                            <img src="img/icon/twitter.ico" style = "padding-right:10px" />
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+       
+ 
+       
+
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pushy.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="js/browser.selector.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $('#foods').mixItUp();
+    </script>
+</body>

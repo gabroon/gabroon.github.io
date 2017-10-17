@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+
+<head>
+    <!-- Load Google font on the first <head> to prevent error in IE -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,800,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+    <title>Burger Xl</title>
+    <meta name="author" content="Burger Bar" />
+    <meta name="description" content="Burger Bar Description" />
+    <meta name="keywords"  content="Burger Bar Keyword" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    
+
+    <!-- Using IE Conditional to load stylesheet, Load style.less for all browser except lower than IE 9. Lower than IE9 using style.css -->
+    <!--[if !IE]><!-->
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<style>
+    /* Orange text gradient only for Webkit (Chrome and Safari) */
+    .webkit #our-team h4.sub-title, .webkit #foods h4.sub-title {
+        background: #ef9e10; /* Old browsers */
+        background: -moz-linear-gradient(left,  #ef9e10 40%, #ef6910 60%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(40%,#ef9e10), color-stop(60%,#ef6910)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  #ef9e10 40%,#ef6910 60%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  #ef9e10 40%,#ef6910 60%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  #ef9e10 40%,#ef6910 60%); /* IE10+ */
+        background: linear-gradient(to right,  #ef9e10 40%,#ef6910 60%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef9e10', endColorstr='#ef6910',GradientType=1 ); /* IE6-9 */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    </style>
+
+    <!-- Option for Less JS -->
+    <script>
+      less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false
+      };
+    </script>
+    <script type="text/javascript" src="js/less.min.js"></script>
+    <script type="text/javascript" src="js/retina.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.71422.js"></script>
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav class="menu menu-left">
+        <div class="close-menu-btn icon-menu active">&nbsp;</div>    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="about.html">About Us</a></li>
+            <li><a href="food.html">Our Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu-btn"><span class="icon-menu">&nbsp;</span> Menu</div>
+
+    
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <!-- Your Content -->
+    <div id="container">
+
+        <!-- Logo, Company Name, and Slogan Area -->
+        <div class="container">
+            <div class="main-container row">
+                <div id="logo">
+                    <a href="index.html">
+                        <div class="logo-icon"><img width='200'src="img/logo.jpg" /></div>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="full-width-header" class="full-width">
+            <div class="triangle top"></div>
+            <div class="inner">
+                <div class="slide">
+                    <div class="inner-slide">
+                        <img src="img/single/wings.jpeg" width="1980" height="560">
+                    </div>
+                </div>
+            </div>
+            <div class="triangle bottom"></div>
+        </div>
+        
+        <div class="clear"></div>
+
+        <div class="container full-page">
+            <div id="about-us" class="main-container">
+                <div class="row">
+                    <div class="main-content col">
+                        <div class="title">
+                            <h1>About Us</h1>
+                        </div>
+                        <div class="intro">
+                            <h2>FEW WORDS ABOUT US</h2>
+                        </div>
+                        <div class="content">
+                          
+                            <div class="content-thumbnail half align-left">
+                                <img src="img/single/about-content.jpg"/>
+                            </div>
+                            <p>We wanted to bring a different type of flavour to Newcastle so as to add to the already wonderfully diverse foodie scene in the region.
+ 
+We aim to give our customers fresh, tasty food, made to order how they like it.
+ 
+We believe that our food is truly different and we'd love for you to taste the difference for yourself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+
+        <div class="container full-page">
+            <div id="our-team" class="main-container">
+                <div class="row">
+                    <div class="title col">
+                        <h1>Our Team</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="team col">
+                        <div class="team-photo">
+                            <img src="img/single/our-team-1.jpg"/>
+                        </div>
+                        <div class="team-name">
+                            <h3>Kevin Smith</h3>
+                            <h4 class="sub-title">Kitchen’s chef</h4>
+                        </div>
+                    </div>
+                    <div class="team col">
+                        <div class="team-photo">
+                            <img src="img/single/our-team-2.jpg"/>
+                        </div>
+                        <div class="team-name">
+                            <h3>David Brown</h3>
+                            <h4 class="sub-title">Taste creator</h4>
+                        </div>
+                    </div>
+                    <div class="team col">
+                        <div class="team-photo">
+                            <img src="img/single/our-team-3.jpg"/>
+                        </div>
+                        <div class="team-name">
+                            <h3>George Marks</h3>
+                            <h4 class="sub-title">Recipe master</h4>
+                        </div>
+                    </div>
+                    <div class="team col">
+                        <div class="team-photo">
+                            <img src="img/single/our-team-4.jpg"/>
+                        </div>
+                        <div class="team-name">
+                            <h3>Peter Robbins</h3>
+                            <h4 class="sub-title">Gourmet</h4>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clear space-area"></div>
+          <div class="triangle top footer"></div>
+        <div class="container footer">
+            <div id="footer" class="main-container">
+                <div class="footer-top row">
+                    <div class="footer-info col">
+                        <div class="footer-logo">
+                            <div class="logo-icon"><img src="img/logo.jpg" /></div>
+                        </div>
+                        <div class="footer-address">
+                            Burger XL</br>4 Waterloo Street, Newcastle upon Tyne, NE1 4DP
+                        </div>
+                        <div class="footer-contact">
+                           0191 2327723<br/><a href="#">info@burgerxl.co.uk</a>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
+                <div class="footer-bottom row">
+                    <div class="footer-copyright col">
+                        <div class="footer-copyright-text">Copyright 2017  Burger Xl. All rights reserved.</div>
+                    </div>
+                    <div class="footer-social-media col">
+                         <div class="social-media-icon">
+                             <!--  <span width="50" height="50" class="icon-social-media icon-facebook">&nbsp;</span>
+                            <span class="icon-social-media icon-twitter">&nbsp;</span>
+                            <span class="icon-social-media icon-google">&nbsp;</span>
+                            <span class="icon-social-media icon-pinterest">&nbsp;</span> -->
+                           <a href="https://www.facebook.com/BurgerXLnewcastle/"> <img  src="img/icon/facebook.ico" style = "padding-right:10px" /> </a>
+                            <img src="img/icon/instagram.ico" style = "padding-right:10px"  />
+                            <img src="img/icon/twitter.ico" style = "padding-right:10px" />
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+       
+ 
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pushy.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/browser.selector.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
