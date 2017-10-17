@@ -624,7 +624,8 @@ a.icon-link.arrow:hover {
   max-width: 36px;
   max-height: 36px;
   padding: 10px;
-  
+  background: black;
+
   color: yellow;
   text-transform: uppercase;
   font-weight: 700;
@@ -637,7 +638,8 @@ a.icon-link.arrow:hover {
   z-index: 4;
 }
 .menu-btn:hover {
-  color: white;
+  color: black;
+      background: yellow;
 }
 .menu-btn:hover .icon-menu {
   background-position: 0 -18px;
