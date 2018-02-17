@@ -14,7 +14,7 @@
 }
 
 p{
-     color: rgb(178, 31, 39); 
+     color: red/*rgb(178, 31, 39); */
 }
 
 #heading-text{
@@ -1047,11 +1047,11 @@ form
         color:#E85700;
     }
 
-    ul.price-table-chart li:nth-child(2) {
+   /* ul.price-table-chart li:nth-child(2) {
         box-shadow: 0 13px 48px rgba(0, 0, 0, 0.2) !important;
         z-index: 2 !important;
         color: #fff !important;
-        background:     #8B0000 /*#8B0000*/ !important;
+        background:     #8B0000 !important;
         border-color: #8B0000 !important;
         -webkit-transform:scale(1.05);
         -moz-transform:scale(1.05);
@@ -1064,7 +1064,7 @@ form
 
     ul.price-table-chart li:nth-child(2) .price_table-button {
         border-color: rgba(255, 255, 255, 0.27) !important;
-    }
+    }*/
 
     .main_content figure {
         padding: 0px 105px;
