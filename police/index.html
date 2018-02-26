@@ -6,31 +6,47 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		var request = $.ajax({
-			  url: "https://data.police.uk/api/crimes-street/all-crime?lat=54.973342&lng=-1.618628&date=2017-01",
-			  type: "GET",
-			  contentType: "JSON",
-			   data: {
-			      format: 'json'
-			   },
-			});
 
-			 
-			request.done(function( data ) {
-			  $( "#data" ).html( data );
-			});
-			 
-			request.fail(function( jqXHR, textStatus ) {
-			  alert( "Request failed: " + textStatus );
-			});
-
-	</script>
 	<title>Police data</title>
 </head>
 <body>
 	<p id="data"></p>
 
 	<button id="button"> get</button>
+	<script type="text/javascript">
+	$('#button').click(function(){
+		var request = $.ajax({
+					  url: "http://data.police.uk/api/crimes-street/all-crime?lat=54.973342&lng=-1.618628&date=2017-01",
+					  type: "GET",
+					  crossDomain: true,
+					  dataType: "json",
+					  contentType: "JSON",
+					  headers :{
+                   		 'Access-Control-Allow-Origin': '*'
+              		  },
+					   data: {
+					      format: 'json'
+					   },
+					});
+
+					 
+					request.done(function( data ) {
+					  $( "#data" ).html( data );
+					});
+					 
+					request.fail(function( jqXHR, textStatus ) {
+					  alert( "Request failed: " + textStatus );
+					});
+		
+	})
+		
+
+
+			 // $.get("http://data.police.uk/api/crimes-street/all-crime?lat=54.973342&lng=-1.618628&date=2017-01", function(data, status){
+			 //        $('#data').html("Data: " + data[0].category + "\nStatus: " + status);
+			 //    });
+
+
+	</script>
 </body>
 </html>
